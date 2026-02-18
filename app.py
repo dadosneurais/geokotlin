@@ -23,13 +23,13 @@ try:
     collection = db["locations"]        # Nome da Coleção
     # Teste de conexão opcional
     client.admin.command('ping')
-    print("Conectado ao MongoDB com sucesso!")
+    print("Conected with db!")
 except Exception as e:
-    print(f"Erro ao conectar no MongoDB: {e}")
+    print(f"db error: {e}")
 
 @app.route('/')
 def home():
-    return "Servidor GeoKotlin Ativo!", 200
+    return "Server running!", 200
 
 @app.route('/save', methods=['POST'])
 def save():
@@ -57,10 +57,10 @@ def save():
             if "_id" in record:
                 record.pop("_id")
 
-            return jsonify({"status": "ok", "message": "Localização salva", "record": record}), 201
+            return jsonify({"status": "ok", "message": "location saved", "record": record}), 201
         
         else:
-            return jsonify({"status": "error", "message": "Latitude ou Longitude ausentes"}), 400
+            return jsonify({"status": "error", "message": "no location informed"}), 400
 
     except Exception as e:
         print(f"Erro ao processar save: {e}")
