@@ -41,6 +41,7 @@ DASHBOARD_HTML = '''
     <div style="display: flex; justify-content: space-between; align-items: center;">
         <h2>history</h2>
         <a href="/logout" style="color:red; text-decoration:none; font-weight:bold;">Exit</a>
+        <a href="https://drive.google.com/file/d/1SXrd2KZxQr8M8Joo1vsNKhIhUVVU1dyj/view?usp=sharing">howdy</a>
     </div>
     <hr>
     <table border="1" style="width:100%; text-align:left; border-collapse: collapse; margin-top:20px;">
