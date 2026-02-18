@@ -19,7 +19,7 @@ collection = db["locations"]        # Coleção
 
 @app.route('/')
 def home():
-    return "Servidor rodando!", 200
+    return "howdy!", 200
 
 @app.route('/save', methods=['POST'])
 def save():
