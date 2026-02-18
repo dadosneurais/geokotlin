@@ -99,7 +99,7 @@ def save():
         ip = request.headers.get('X-Forwarded-For', request.remote_addr).split(',')[0]
         
         # Pega o nome do dispositivo enviado pelo Android
-        dispositivo = data.get("dispositivo", "Unknown")
+        dispositivo = data.get("device", "Unknown")
         
         record = {
             "dispositivo": dispositivo,
