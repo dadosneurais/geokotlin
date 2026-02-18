@@ -59,7 +59,7 @@ DASHBOARD_HTML = '''
             <td style="padding:10px;">{{ loc.latitude }}, {{ loc.longitude }}</td>
             <td style="padding:10px;">
                 <a href="https://www.google.com/maps/search/?api=1&query={{ loc.latitude }},{{ loc.longitude }}" target="_blank" style="color:#007bff; text-decoration:none; font-weight:bold;">
-                    📍 Abrir no Maps
+                    📍 Open Maps
                 </a>
             </td>
         </tr>
@@ -98,7 +98,7 @@ def save():
         ip = request.headers.get('X-Forwarded-For', request.remote_addr).split(',')[0]
         
         # Pega o nome do dispositivo enviado pelo Android
-        dispositivo = data.get("dispositivo", "Desconhecido")
+        dispositivo = data.get("dispositivo", "Unknown")
         
         record = {
             "dispositivo": dispositivo,
